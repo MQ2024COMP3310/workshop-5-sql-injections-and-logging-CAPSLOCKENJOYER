@@ -56,7 +56,7 @@ public class App {
             String line;
             int i = 1;
             while ((line = br.readLine()) != null) {
-                if (line.matches("[a-z]{4}%")) {
+                if (line.matches("^[a-z]{4}$")) {
                     wordleDatabaseConnection.addValidWord(i, line);
                     String msg = String.format("Added %s to db", line);
                     logger.log(Level.INFO, msg);
